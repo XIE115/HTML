@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+        ul{
+            width: 1385px;
+            height: 50px;
+            background-color: #1479D7;
+            border-radius: 5px;
+            margin: 0 auto;
+            padding-left: 15px;
+        }
+        ul>li{
+            width: 80px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+        }
+        ul>li>a{
+            color: white;
+        }
+        ul>li:not(:last-child) a:hover{
+            color: #1579D7;
+            background-color: #CBE1ED;
+            padding: 5px 5px;
+        }
+        ol{
+            width: 1382px;
+            top: 50px;
+            right: -20px;
+            padding-left: 18px;
+            position: absolute;
+            display: none;
+            box-shadow: 2px 2px 2px 2px slategray;
+        }
+        ol>li{
+            width: 80px;
+            text-align: center;
+            line-height: 40px;
+            float: left;
+        }
+        ol>li>a{
+            color: black;
+        }
+        ol>li>a:hover{
+            color: #1479D7;
+        }
+        .more{
+            position: relative;
+        }
+        .more:hover ol{
+            display: block;
+        }
+        .more::after{
+            content: "";
+            position: absolute;
+            top:22px;
+            right:10px;;
+            width: 10px;
+            height: 6px;
+            background-image:url(./bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .more:hover::after{
+            background-position:0 -29px;
+        }
+    </style>
+</head>
+
+    <body>
+        <ul>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">视频</a></li>
+            <li><a href="#">公益</a></li>
+            <li><a href="#">军事</a></li>
+            <li><a href="#">体育</a></li>
+            <li><a href="#">NBA</a></li>
+            <li><a href="#">娱乐</a></li>
+            <li><a href="#">财经</a></li>
+            <li><a href="#">科技</a></li>
+            <li><a href="#">时尚</a></li>
+            <li><a href="#">汽车</a></li>
+            <li><a href="#">房产</a></li>
+            <li><a href="#">教育</a></li>
+            <li><a href="#">文化</a></li>
+            <li><a href="#">星座</a></li>
+            <li><a href="#">游戏</a></li>
+            <li class="more">
+                <a href="#">更多</a>
+                <ol>
+                    <li><a href="#">文学</a></li>
+                    <li><a href="#">热剧</a></li>
+                    <li><a href="#">儿童</a></li>
+                    <li><a href="#">历史</a></li>
+                    <li><a href="#">英超</a></li>
+                    <li><a href="#">CBA</a></li>
+                    <li><a href="#">明星</a></li>
+                    <li><a href="#">理财</a></li>
+                    <li><a href="#">科普</a></li>
+                    <li><a href="#">健康</a></li>
+                    <li><a href="#">车型</a></li>
+                    <li><a href="#">家居</a></li>
+                    <li><a href="#">育儿</a></li>
+                    <li><a href="#">情感</a></li>
+                    <li><a href="#">动漫</a></li>
+                    <li><a href="#">享看</a></li>
+                    <li><a href="#">天气</a></li>
+                    <li><a href="#">较真</a></li>
+                    <li><a href="#">综艺</a></li>
+                    <li><a href="#">新国风</a></li>
+                    <li><a href="#">国际</a></li>
+                    <li><a href="#">中超</a></li>
+                    <li><a href="#">社区</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">证券</a></li>
+                    <li><a href="#">数码</a></li>
+                    <li><a href="#">美容</a></li>
+                    <li><a href="#">生活</a></li>
+                    <li><a href="#">全部</a></li>
+                </ol>
+            </li>
+        </ul>
+    </body>
+</html>
