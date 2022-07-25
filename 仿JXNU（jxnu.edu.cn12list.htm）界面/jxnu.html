@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育教学</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    body {
+        line-height: 1;
+        font-family: "Microsoft YaHei";
+    }
+
+    a {
+        transition: all 0.4s;
+    }
+
+    .header {
+        width: 1520px;
+        height: 95px;
+        margin: 0 auto;
+    }
+
+    .inner {
+        position: relative;
+        margin: 0 auto;
+        width: 1200px;
+        height: 95px;
+    }
+
+    .clearfix {
+        display: block;
+    }
+
+    .clearfix:after {
+        clear: both;
+        content: "";
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+
+    .head-left {
+        display: inline-block;
+    }
+
+    .head-logo {
+        float: left;
+        margin-top: 17px;
+    }
+
+    .head-right {
+        float: right;
+        margin-top: 12px;
+        width: 200px;
+    }
+
+    .collect {
+        text-align: right;
+        padding-right: 3px;
+    }
+
+    .collect a {
+        font-size: 13px;
+        color: #3b3b3b;
+    }
+
+    .collect a:hover {
+        color: #095ab5;
+    }
+
+    .search-panel {
+        position: relative;
+        float: right;
+        clear: right;
+        padding: 2px 0px 7px 0px;
+        margin-top: 17px;
+        width: 584px;
+    }
+
+    .jsnd {
+        float: left;
+        opacity: 1.0;
+    }
+
+    .search {
+        background-color: #fff;
+        overflow: hidden;
+        width: 194px;
+        float: right;
+    }
+
+    .search-panel form {
+        display: block;
+    }
+
+    .input-search {
+        margin-right: 34px;
+    }
+
+    .input-search>.search-title {
+        width: 100%;
+        height: 31px;
+        line-height: 31px;
+        background: none;
+        font-size: 12px;
+        padding-left: 10px;
+        border: 1px solid #e6e5e6;
+        color: #606060;
+    }
+
+    .sbm-search {
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        right: 0;
+        top: 1px;
+    }
+
+    .sbm-search>.search-submit {
+        width: 34px;
+        height: 34px;
+        border: 0;
+        outline: 0;
+        background: #cda544 url(./img/sous.png) center no-repeat;
+        cursor: pointer;
+    }
+
+    .nav {
+        background-color: #a13838;
+        width: 100%;
+        height: 40px;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+
+    .nav-inner {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu {
+        margin: 0 auto;
+        float: left;
+        display: block;
+        list-style: disc;
+        max-height: 40px;
+    }
+
+    .nav-li {
+        float: left;
+        position: relative;
+        cursor: pointer;
+        line-height: 40px;
+        padding: 0 23px;
+    }
+
+    .menu>li>a {
+        color: white;
+        font-size: 16px;
+    }
+
+    .menu>li:hover {
+        background-color: rgb(125, 41, 41);
+        transition: 1s;
+    }
+
+    .nav-sub {
+        position: absolute;
+        float: left;
+        left: 0;
+        top: 40px;
+        min-width: 100%;
+        z-index: 100;
+        background: #000;
+        opacity: 0.7;
+        display: none;
+    }
+
+    .nav-li:hover ol {
+        display: block;
+    }
+
+    .nav-sub a {
+        color: #fff;
+    }
+
+    .sub-li {
+        position: relative;
+        white-space: nowrap;
+        text-align: center;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        background: none;
+        color: #fff;
+    }
+
+    .sub-li>a:hover {
+        color: #fff;
+        background-color: #7d2929;
+        display: block;
+        transition: 0.4s;
+    }
+
+    .banner {
+        width: 100%;
+        background: #f6f6f6;
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner-img {
+        background-image: url(./img/banner.jpg);
+        height: 183px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        text-align: center;
+        background-size: 1200px 100%;
+    }
+
+    .content {
+        width: 100%;
+        background: #fff;
+        margin: 0 auto;
+    }
+
+    .content-inner {
+        padding: 0px 0px 25px 0px;
+        background-color: #fff;
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .mod {
+        margin-right: 34px;
+        margin-left: 30px;
+    }
+
+    .left-menu {
+        width: 250px;
+        float: left;
+        margin-right: -250px;
+        position: relative;
+        text-align: center;
+        margin-top: -57px;
+    }
+
+    .left-menu-head {
+        position: relative;
+        background-color: #a13838;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: normal;
+        color: #fff;
+    }
+
+    .left-menu-txt {
+        display: block;
+        line-height: 57px;
+        font-weight: bold;
+    }
+
+    .left-menu-list {
+        border: 1px solid #e4e4e4;
+    }
+
+    .menu-list-ul {
+        border-top: 0px solid #2867A0;
+        border-bottom: 0px solid #fff;
+        display: block;
+        width: 100%;
+    }
+
+    .menu-list-li {
+        display: block;
+        width: 100%;
+    }
+
+    .menu-list-li>a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #333;
+        font-size: 16px;
+        font-weight: normal;
+        background-color: #f6f6f5;
+        border-top: 0px solid #fff;
+        border-bottom: 1px solid #e9e9e9;
+    }
+
+    .menu-list-li>a:hover {
+        color: #3e3e3e;
+        background: #fff url(./img/list.png) no-repeat left center;
+    }
+
+    .menu-list-txt {
+        line-height: 50px;
+        padding: 0;
+        display: inline-block;
+        cursor: pointer;
+        color: #3e3e3e;
+    }
+
+    .news {
+        width: 100%;
+        min-height: 500px;
+        float: left;
+    }
+
+    .news-box {
+        margin-left: 290px;
+    }
+
+    .news-head {
+        border-bottom: 1px solid #bbbbbb;
+    }
+
+    .news-li {
+        display: block;
+        float: right;
+        white-space: nowrap;
+        height: 61px;
+        line-height: 61px;
+        color: #454545;
+    }
+
+    .news-li a {
+        color: #2f2f2f;
+        font-size: 13px;
+    }
+
+    .possplit {
+        background-image: url(./img/possplit.gif);
+        background-repeat: no-repeat;
+        text-indent: 22px;
+        background-position: center;
+        width: 10px;
+        display: inline-block;
+    }
+
+    .news-title {
+        display: block;
+        float: left;
+        height: 61px;
+        line-height: 61px;
+    }
+
+    .news-title h2 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #a13838;
+    }
+
+    .news-con {
+        padding: 6px 0px 10px 0px;
+        margin: 0 0px;
+    }
+
+    .news-list {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        line-height: 1.75;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .title-list {
+        text-indent: 32px;
+        line-height: 1.5em;
+        margin: 0cm 0cm 13px;
+    }
+
+    .title-list>strong>span {
+        color: #c00000;
+        line-height: 1.5em;
+        font-size: 18px;
+    }
+
+    .news-txt {
+        font-size: 18px;
+        text-indent: 2em;
+        padding-bottom: 10px;
+        line-height: 1.75em;
+    }
+    .footer{
+        background-color: #a13838;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .footer-inner{
+        padding: 19px 0px 14px;
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .footer-left{
+        float: left;
+        margin-left: 28px;
+        width: 65%;
+        margin-top: 14px;
+    }
+    .footer-left-menu{
+        padding: 5px 0 0 103px;
+        background: url(./img/footer_bg.png) no-repeat left center;
+        width: 75%;
+        display: inline-block;
+        vertical-align: top;
+        background-size: 11.5%;
+    }
+    .footer .footer-inner p span{
+        margin-right: 28px;
+    }
+    .footer .footer-inner p{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 12px;
+        line-height: 24px;
+        font-weight: normal;
+        text-align: left;
+        color: #fff;
+    }
+    .footer-left-menu-list>p>span{
+        display: block;
+    }
+    .footer-right{
+        float: right;
+        width: 204px;
+        margin-right: 24px;
+    }
+    .footer-right>ul{
+        float: left;
+        display: flex;
+
+    }
+    .footer-right>ul>li{
+        line-height: 28px;
+        margin: 0 8px;
+        float: left;
+    }
+    .wechat_img{
+        vertical-align: top;
+    }
+    .wechat_txt{
+        text-align: center;
+        font-size: 12px;
+        color: #fff;
+        line-height: 5px;
+    }
+    .weibo_img{
+        vertical-align: top;
+    }
+    .weibo_txt{
+        text-align: center;
+        font-size: 12px;
+        color: #fff;
+        line-height: 5px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="inner">
+            <div class="mod clearfix">
+                <div class="head-left">
+                    <div class="head-logo">
+                        <a href="https://www.jxnu.edu.cn/main.htm" title="返回首页">
+                            <img src="./img/logo.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="head-right">
+                    <div class="collect clearfix">
+                        <a href="" title="收藏本站">收藏</a>
+                    </div>
+                    <div class="wp-panel search-panel">
+                        <div class="jsnd">
+                            <img src="./img/jsnd.png">
+                        </div>
+                        <div class="search">
+                            <form method="post" target="_blank">
+                                <div class="input-search">
+                                    <input class="search-title" type="text" placeholder="Search......">
+                                </div>
+                                <div class="sbm-search">
+                                    <input class="search-submit" type="submit" value="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="nav-inner clearfix">
+            <ul class="menu">
+                <li class="nav-li"><a href="">首页</a></li>
+                <li class="nav-li"><a href="">学校概况</a>
+                    <ol class="nav-sub">
+                        <li class="sub-li"><a href="">学校简介</a></li>
+                        <li class="sub-li"><a href="">学校章程</a></li>
+                        <li class="sub-li"><a href="">历史沿革</a></li>
+                        <li class="sub-li"><a href="">历任领导</a></li>
+                        <li class="sub-li"><a href="">现任领导</a></li>
+                        <li class="sub-li"><a href="">领导关怀</a></li>
+                        <li class="sub-li"><a href="">组织机构</a></li>
+                        <li class="sub-li"><a href="">办公电话</a></li>
+                        <li class="sub-li"><a href="">走进师大</a></li>
+                    </ol>
+                </li>
+                <li class="nav-li"><a href="">机构设置</a>
+                    <ol class="nav-sub">
+                        <li class="sub-li"><a href="">党政机构</a></li>
+                        <li class="sub-li"><a href="">教学机构</a></li>
+                        <li class="sub-li"><a href="">业务机构</a></li>
+                        <li class="sub-li"><a href="">附属机构</a></li>
+                        <li class="sub-li"><a href="">科研机构</a></li>
+                    </ol>
+                </li>
+                <li class="nav-li"><a href="">师资团队</a>
+                    <ol class="nav-sub">
+                        <li class="sub-li"><a href="">高层次人才</a></li>
+                        <li class="sub-li"><a href="">正高职称人员</a></li>
+                        <li class="sub-li"><a href="">人才招聘</a></li>
+                    </ol>
+                </li>
+                <li class="nav-li"><a href="">教育教学</a>
+                    <ol class="nav-sub">
+                        <li class="sub-li"><a href="">本科生教育</a></li>
+                        <li class="sub-li"><a href="">研究生教育</a></li>
+                        <li class="sub-li"><a href="">国际学生教育</a></li>
+                        <li class="sub-li"><a href="">继续教育</a></li>
+                        <li class="sub-li"><a href="">慕课（网络教育）</a></li>
+                    </ol>
+                </li>
+                <li class="nav-li"><a href="">科学研究</a>
+                    <ol class="nav-sub">
+                        <li class="sub-li"><a href="">科技工作</a></li>
+                        <li class="sub-li"><a href="">社科工作</a></li>
+                        <li class="sub-li"><a href="">科研机构</a></li>
+                    </ol>
+                </li>
+                <li class="nav-li"><a href="">招生就业</a>
+                    <ol class="nav-sub">
+                        <li class="sub-li"><a href="">本科生招生</a></li>
+                        <li class="sub-li"><a href="">研究生招生</a></li>
+                        <li class="sub-li"><a href="">毕业生就业</a></li>
+                    </ol>
+                </li>
+                <li class="nav-li"><a href="">合作交流</a></li>
+                <li class="nav-li"><a href="">图书档案</a>
+                    <ol class="nav-sub">
+                        <li class="sub-li"><a href="">图书馆</a></li>
+                        <li class="sub-li"><a href="">档案馆</a></li>
+                    </ol>
+                </li>
+                <li class="nav-li"><a href="">走进师大</a>
+                    <ol class="nav-sub">
+                        <li class="sub-li"><a href="">校园生活</a></li>
+                        <li class="sub-li"><a href="">校园参观</a></li>
+                        <li class="sub-li"><a href="">实用信息</a></li>
+                        <li class="sub-li"><a href="">信息公开</a></li>
+                    </ol>
+                </li>
+                <li class="nav-li"><a href="">English</a>
+                    <ol class="nav-sub">
+                        <li class="sub-li"><a href="">Brief Introduction</a></li>
+                        <li class="sub-li"><a href="">Historical Development</a></li>
+                        <li class="sub-li"><a href="">School Philosophy</a></li>
+                        <li class="sub-li"><a href="">Academic Establishment</a></li>
+                        <li class="sub-li"><a href="">Scientific Research</a></li>
+                        <li class="sub-li"><a href="">Teaching staff</a></li>
+                        <li class="sub-li"><a href="">Training of Talents</a></li>
+                        <li class="sub-li"><a href="">Student Competition</a></li>
+                        <li class="sub-li"><a href="">Teacher Education</a></li>
+                        <li class="sub-li"><a href="">Service to Society</a></li>
+                        <li class="sub-li"><a href="">International Cooperation</a></li>
+                        <li class="sub-li"><a href="">Alumni</a></li>
+                        <li class="sub-li"><a href="">Schools</a></li>
+                        <li class="sub-li"><a href="">International Student</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="banner-img">
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-inner">
+            <div class="mod clearfix">
+                <div class="left-menu">
+                    <div class="left-menu-head">
+                        <h3>
+                            <span class="left-menu-txt">教育教学</span>
+                        </h3>
+                    </div>
+                    <div class="left-menu-list">
+                        <ul class="menu-list-ul">
+                            <li class="menu-list-li">
+                                <a href="">
+                                    <span class="menu-list-txt">本科生教育</span>
+                                </a>
+                            </li>
+                            <li class="menu-list-li">
+                                <a href="">
+                                    <span class="menu-list-txt">研究生教育</span>
+                                </a>
+                            </li>
+                            <li class="menu-list-li">
+                                <a href="">
+                                    <span class="menu-list-txt">国际学生教育</span>
+                                </a>
+                            </li>
+                            <li class="menu-list-li">
+                                <a href="">
+                                    <span class="menu-list-txt">继续教育</span>
+                                </a>
+                            </li>
+                            <li class="menu-list-li">
+                                <a href="">
+                                    <span class="menu-list-txt">慕课（网络教育）</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="news-box">
+                        <div class="news-head">
+                            <ul class="clearfix">
+                                <li class="news-li">
+                                    <span style="font-size:13px;">当前位置:</span>
+                                    <a href="">首页</a>
+                                    <span class="possplit">&nbsp;&nbsp;</span>
+                                    <a href="">教育教学</a>
+                                </li>
+                                <li class="news-title">
+                                    <h2>教育教学</h2>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="news-con">
+                            <div class="news-list">
+                                <p class="title-list">
+                                    <strong>
+                                        <span>
+                                            人才培养
+                                        </span>
+                                    </strong>
+                                </p>
+                                <p class="news-txt">
+                                    学校现有全日制本科生27400余人，博士、硕士研究生7700余人，成人高等学历教育学生1万余人。
+                                    近年来获批国家教学成果奖（高等教育）二等奖1项，国家教学成果奖（基础教育）一等奖1项，二等奖2项，
+                                    国家级一流专业建设点26个，国家级专业综合改革试点项目2个，
+                                    国家级大学生校外实践教育基地建设项目2个，国家人文素质教育基地1个，国家级实验教学示范中心2个；
+                                    首批国家级一流本科课程11门；教育部虚拟教研室建设点1个，国家级教学团队2个，全国高校黄大年式教学团队1个，
+                                    教育部万种新教材11种；省级卓越人才培养计划项目7个、省级一流专业建设点23个、省级专业综合改革试点项目8个、
+                                    省级一流本科课程158门。获批全国教育硕士专业学位研究生联合培养示范基地1个，省级研究生教育创新基地4个，
+                                    省级行业企业联合培养基地8个，省级研究生工作站1个，省级实验教学示范中心8个。
+                                </p>
+                                <p class="news-txt">
+                                    近年来，学校坚持立德树人，树立以“学”为中心的教育理念，围绕培养社会中坚骨干人才的目标定
+                                    位，着力满足学生对专业、课程、教师及其教学方式方法、自主发展多样成长的四个理性选择，启动“正大
+                                    学子”创新人才培养计划，在全省率先开展本科师范生免费教育，实施本硕、硕博连读培养模式，本科生初
+                                    次就业率稳居全省高校前茅，研究生一次性就业率稳定在90%以上，是全国毕业生就业典型50强高校。学
+                                    校先后获批全国第一批本科院校教育信息化试点单位、教育部全国高校实践育人创新创业基地、全国首批深
+                                    化创新创业教育改革示范高校、全国高校教师考核评价改革示范校、全国创新创业典型经验50强高校、全
+                                    国高校思想政治工作队伍培训研修中心（江西师范大学）、教育部“体育美育浸润行动计划”实施高校、教
+                                    育部首批“宏志助航计划”实施高校和国家语言文字推广基地，马克思主义学院入选第三批全国重点马克思
+                                    主义学院。2017年教育部本科教学工作审核评估专家组盛赞学校为一所具有历史底蕴、文化情怀、名校气
+                                    质的“模范大学”。
+                                </p>
+                                <p class="title-list">
+                                    <br>
+                                </p>
+                                <p class="title-list">
+                                    <strong>
+                                        <span>
+                                            学生竞赛
+                                        </span>
+                                    </strong>
+                                </p>
+                                <p class="news-txt">
+                                    学校注重通过第二课堂与第一课堂互动，大力推进大学生素质拓展教育，是全国“大学生素质拓展计
+                                    划”试点高校，是全国第一所被团中央授予“全国五四红旗团委标兵”荣誉称号的师范院校。学生英语四六
+                                    级考试、计算机等级考试通过率等均一直稳居全省高校前列，并在全国大学生文艺汇演、体育竞赛、专业竞
+                                    赛、科技活动等方面取得优异成绩。如学校“蓝天”环保社团获世界自然基金会“世界生命湖泊最佳保护实
+                                    践奖”；学生在第六届全国大学生艺术展演比赛中获一等奖2项；杨文军同学成为历史上首次蝉联皮划艇项
+                                    目奥运冠军的运动员，金紫薇及队友实现了中国赛艇奥运金牌“零”的突破，寿旻超同学在第26届世界大
+                                    学生运动会上斩获三枚金牌；学校在第四届全国师范院校师范生教学技能竞赛中获奖总数列全国第1位；在
+                                    “挑战杯”全国大学生课外学术科技作品竞赛中荣获特等奖2项，特别一等奖1项，一等奖6项，二、三等奖
+                                    27项，成功跻身全国30强；在“挑战杯”中国大学生创业计划竞赛中荣获金奖1项、银奖2项、铜奖7项；
+                                    在“创青春”全国大学生创业大赛中获得金奖3项，银、铜奖11项；在七届中国国际“互联网+”大学生创
+                                    新创业大赛中共获6金20银29铜，是全省唯一连续五届大赛获得先进集体奖（全国20强）的高校，也是全
+                                    国唯一连续五届大赛获此殊荣的师范院校。学校在中国高等教育学会发布2021全国普通高校大学生竞赛榜
+                                    单中居全国高校第77位、师范院校第4位，在“2017—2021年全国师范类本科院校大学生竞赛榜单”中排
+                                    名第7位。
+                                </p>
+                                <p class="title-list">
+                                    <br>
+                                </p>
+                                <p class="title-list">
+                                    <br>
+                                </p>
+                                <p style="margin-bottom:10px;">
+                                    <img src="./img/photo.jpg" style="max-width:680px;">
+                                </p>
+                                <p class="title-list">
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="clearfix">
+                <div class="footer-left">
+                    <div class="footer-left-menu">
+                        <p>
+                            <span>版权:江西师范大学(Jiangxi Normal University)</span>
+                            <span>ICP备案编号：赣B2-20050166号-1</span>
+                        </p>
+            
+                    <div class="footer-left-menu-list">
+                        <p>学校地址:</p>
+                        <p>
+                            <span>
+                            ［瑶湖校区］江西省南昌市紫阳大道99号
+                            <span>邮政编码:330022</span>
+                            </span>
+                            <span>
+                            ［青山湖校区］江西省南昌市北京西路437号
+                            <span>邮政编码：330027</span>
+                            </span>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <ul>
+                        <li>
+                            <div class="wechat">
+                                <div class="wechat_img">
+                                    <img src="./img/WeChat.png">
+                                </div>
+                                <div class="wechat_txt">微信</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="weibo">
+                                <div class="weibo_img">
+                                    <img src="./img/weibo.png">
+                                </div>
+                                <div class="weibo_txt">微博</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
